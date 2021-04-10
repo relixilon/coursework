@@ -1,0 +1,28 @@
+{% include 'layout.html' %}
+{% block content %}
+  <div>
+    <form method="POST" action="">
+      {{form.hidden_tag()}}
+      <fieldset>
+        <legend>
+          Join Today
+        </legend>
+        <div>
+          {{form.email.label()}}
+          {{form.email()}}
+          {{form.password.label()}}
+          {{form.password()}}
+        </div>
+      </fieldset>
+    <div>
+      {{form.submit()}}
+    </div>
+    </form>
+  </div>
+  <div>
+    <small>
+      Dont have an account yet? <a href="{{url_for('register')}}">Register</a>
+    </small>
+  </div>
+  
+{% endblock content %}

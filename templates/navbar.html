@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+{% block  nav %}
+  <div class="nav">
+    <ul>
+      <li><a href="">Home</a></li>
+      <li><a href=''>Plan</a></li>
+      <li><a href=''>My Bookings</a></li>
+      <li><a href="{{url_for('register')}}">Sign up</a></li>
+      <li><a href=''>Log in</a></li>
+    </ul>
+  </div>
+
+{% endblock nav %}

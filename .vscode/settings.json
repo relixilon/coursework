@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+ "*.html": "jinja-html",
+ ".html":"html"
+ },
+ "auto-close-tag.activationOnLanguage": ["*"],
+}

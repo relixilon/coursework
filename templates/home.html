@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block  content%}
+    <div class=home-content>
+        <form method="POST" action="">
+            <div class="home-form">
+                <div class="home-form-field">
+                    <p>From:</p>
+                    <input type="text">
+                </div>
+                <div class="home-form-field">
+                    <p>To:</p>
+                    <input type="text">
+                </div>
+                <div>
+                    <select>
+                        <option>One Way</option>
+                        <option>Return</option>
+                    </select>
+                    
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+{% endblock content %}
