@@ -20,11 +20,27 @@
       <li><a href="{{url_for('home')}}">Home</a></li>
       <li><a href=''>Plan</a></li>
       <li><a href=''>My Bookings</a></li>
-      <li><a href="{{url_for('register')}}">Sign up</a></li>
-      <li><a href="{{url_for('login')}}">Log in</a></li>
+      {% if not login %}
+        <li><a href="{{url_for('register')}}">Sign up</a></li>
+        <li><a href="{{url_for('login')}}">Log in</a></li>
+      {% else %}
+        <div>
+          <p>Loged in as {{user[0]}}</p>
+        </div>
+      {% endif %}
     </ul>  
   </div>
 
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul class=flashes>
+      {% for message in messages %}
+        <li>{{ message }}</li>
+     {% endfor %}
+     </ul>
+    {% endif %}
+  {% endwith %}
+  
   {% block content %}
       
   {% endblock content %}
